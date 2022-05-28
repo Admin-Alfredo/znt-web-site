@@ -137,7 +137,7 @@ export const Container = styled.div`
   &.tablet > .display{
     width: 90%;
     left: calc(50% - (90% / 2));
-    top: calc(50% - (${tablet.halfHeight()}px / 2)));
+    top: calc(50% - (${tablet.halfHeight()}px / 2));
   }
   &.tablet > .base{
     visibility: hidden;
@@ -173,11 +173,16 @@ export const Container = styled.div`
     left: calc(50% - (6px / 2));
     bottom: -8px;
     visibility: visible;
-  }
-  
+  }; 
 `
 
-export const Display = styled.div.attrs({ className: 'display' })``;
+export const Display = styled.div.attrs({ className: 'display' })`
+
+  overflow: auto;
+  &::-webkit-scrollbar{
+    width: 0;
+  }
+`;
 
 export const Base = styled.div.attrs({ className: 'base' })`
   --width: 60px;

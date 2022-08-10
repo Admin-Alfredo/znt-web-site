@@ -46,13 +46,3 @@
   - <div style="width:100px;height:25px;background-color:#fba2e8;color:#FEFEFE;font-size:1.2rem;text-align:center">#fba2e8</div>
 
   - <div style="width:100px;height:25px;background-color:#80b9f9;color:#FEFEFE;font-size:1.2rem;text-align:center">#fba2e8</div>
-
-  `tamanho`:
-### 
-
-iniciarHome():
-
-getAtualLevel():
-
-setLevel(index):
-  replaceLevel({level: index, before: getAtualLevel()})

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Link from 'next/link'
-import {FaBlogger, FaGlobe, FaGlobeAfrica, FaMicrochip} from "react-icons/fa";
+import { FaBlogger, FaGlobe, FaGlobeAfrica, FaMicrochip } from "react-icons/fa";
 
 export const WrapIcon = styled.div`
   height: 30px;
@@ -40,9 +40,9 @@ export const Button = styled.button`
 
 `
 
-export const ButtonLink = function(props){
+export const ButtonLink = function (props) {
   return (
-    <Link {...props} style={{textDecoration: 'none',color: 'white', backgroundColor: 'white'}}>
+    <Link {...props} style={{ textDecoration: 'none', color: 'white', backgroundColor: 'white' }}>
       {props.children}
     </Link>
   )
@@ -54,8 +54,6 @@ export const Title = styled.h1`
   font-family: Roboto-Black;
   letter-spacing: -2px;
   color: #fff;
-  /* text-shadow:1px 2px 0px #801ad6; */
-
   > span{
     font: inherit;
     text-align: center;
@@ -70,5 +68,8 @@ export const SubTitle = styled.h2`
 `
 
 export const Text = styled.p`
-
+  font-family: Roboto-Light;
+  line-height: 30px;
+  font-size: 1rem;
+  color: #333;
 `

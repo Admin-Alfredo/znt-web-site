@@ -9,7 +9,8 @@ import {
   WrapperHeroTitle,
   ContentMain,
   Footer,
-  ButtonsGroupHero
+  ButtonsGroupHero,
+  WrapperHeroContent
 } from './styles'
 
 
@@ -17,24 +18,26 @@ export default function Home() {
   return (
     <Contanier>
       <Hero>
-        <HeroAnimationFrame />
-        <WrapperHeroTitle>
-          <Title>
-            <span>Cria seu site e</span>
-            <span>Dá visiblidade a</span>
-            <span>seu negócio</span>
-          </Title>
-        </WrapperHeroTitle>
-        <ButtonsGroupHero>
-          <Button>Encomendar</Button>
-          <ButtonLink href="/">ver planos</ButtonLink>
-        </ButtonsGroupHero>
+        <WrapperHeroContent>
+          <HeroAnimationFrame />
+          <WrapperHeroTitle>
+            <Title>
+              <span>Cria seu site e</span>
+              <span>Dá visiblidade a</span>
+              <span>seu negócio</span>
+            </Title>
+          </WrapperHeroTitle>
+          <ButtonsGroupHero>
+            <Button>Encomendar</Button>
+            <ButtonLink href="/">ver planos</ButtonLink>
+          </ButtonsGroupHero>
+        </WrapperHeroContent>
       </Hero>
       <ContentMain>
-        {SectionDatas?.map((data, key)=>(<Section data={data} key={key}/>))}
+        {SectionDatas?.map((data, key) => (<Section data={data} key={key} />))}
       </ContentMain>
       <Footer>
-        
+
       </Footer>
     </Contanier>
   )

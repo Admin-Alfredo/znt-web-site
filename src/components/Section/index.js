@@ -8,6 +8,7 @@ import {
   WrapperContent,
   WrapperText,
   WrapperAnimationFrame,
+  TextSection,
 
 } from './styles'
 
@@ -22,11 +23,11 @@ export default function Section(props) {
             <AnimationComponent />
           </WrapperAnimationFrame>
           <WrapperText>
-            {texts?.map(text => <Text>{text}</Text>)}
+            {texts?.map(text => <TextSection>{text}</TextSection>)}
           </WrapperText>
         </WrapperContent>
         <WrapperSectionButtons>
-
+            
         </WrapperSectionButtons>
     </Container>
   )

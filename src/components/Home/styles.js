@@ -6,25 +6,34 @@ export const Contanier = styled.div`
 export const Hero = styled.div`
   width: 100%;
   height: 100vh;
+  margin-top: 60px 0;
   position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* flex-direction: column; */
+  /* align-items: center; */
   background: #491fc8;
+  transform: translateY(-10px) skewY(-5deg);
+  transform-style: initial;
 `
-
+export const WrapperHeroContent = styled.div`
+  position:relative;
+  width: 100%;
+  transform:skewY(5deg);
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+`
 export const WrapperHeroTitle = styled.div`
   position:relative;
-  height: 100%auto;
   width: 100%;
-  margin-top: 250px;
+  margin-top: 150px;
 `
 export const ButtonsGroupHero = styled.div`
   position:relative;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  margin: 40px;
+  margin: 40px 0;
 `
 export const ContentMain = styled.main`
   width: 100%;

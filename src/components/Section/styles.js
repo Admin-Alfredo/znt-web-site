@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Container as ContainerBackgroundHero } from '../HeroAnimationFrame/styles'
+import { Text } from '../Util'
 
 export const Container = styled.div`
   position: relative;
@@ -31,13 +32,9 @@ export const WrapperHeroTextAndTitle = styled.div`
 export const WrapperText = styled.div`
   position: relative;
   max-width: 300px;
-  > p{
-    font-family: Roboto-Light;
-    line-height: 30px;
-    color: ${props => props.colortext ? props.colortext : props.theme.light};
-    font-size: 1rem;
-    color: #333;
-  }
+`
+export const TextSection = styled(Text)`
+  font-size: 1.1rem;
 `
 export const WrapperContent = styled.div`
   display: flex;

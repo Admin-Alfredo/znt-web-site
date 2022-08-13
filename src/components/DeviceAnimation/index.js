@@ -3,7 +3,7 @@ import { Container, Display, Base } from "./styles";
 
 export default function DeviceAnimation({ animations }){
   return (
-    <Container className="laptop">
+    <Container className="laptop tablet">
       <Display/>
       <Base>
         <div className="teclado"></div>

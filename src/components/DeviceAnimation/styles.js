@@ -56,6 +56,7 @@ export const Container = styled.div`
   height: ${desktop.height}px;
   background: linear-gradient(-30deg,#000  50%,  #333 10%);
   left: calc(50% - ${desktop.halfWidth()}px);
+  top: calc(50% - ${desktop.halfHeight()}px);
   transition: .5s ease-in-out;
 
   & > .display{
@@ -72,12 +73,14 @@ export const Container = styled.div`
     top: calc(50% - ((var(--height)/ 2)));
   }
   
+  /* LAPTOP */
   &.laptop{
     border-radius: 10px 10px 0px 0px;
-    width: 180px;
-    height: 110px;
-    background: linear-gradient(-30deg,#000  50%,  #333 10%);
-    left: calc(50% - ${desktop.halfWidth()}px);
+    width: ${laptop.width}px;
+    height: ${laptop.height}px;
+    background: linear-gradient(-30deg,#000  50%,  #333 50%);
+    left: calc(50% - ${laptop.halfWidth()}px);
+    top: calc(50% - ${laptop.halfHeight()}px);
   }
   &.laptop > .display::after{
     /* CAMERAA LAPTOP */
@@ -109,6 +112,22 @@ export const Container = styled.div`
     left: calc(50% - (200px / 2));
     bottom:-10px ;
     background: #000;
+  }
+  /* TABLET */
+  &.tablet {
+    width: 140px;
+    height: 90px;
+    border-radius: 8px;
+    left: calc(50% - (140px / 2));
+  }
+  &.tablet > .display{
+    width: 90%;
+    left: calc(50% - (90% / 2));
+    top: calc(50% - ((var(--height) / 2)));
+
+  }
+  &.tablet > .base{
+    visibility: hidden;
   }
 `
 export const Display = styled.div.attrs({ className: 'display' })``

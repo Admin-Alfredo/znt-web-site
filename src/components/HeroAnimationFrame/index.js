@@ -58,10 +58,6 @@ export default function HeroAnimationFrame() {
         console.log("Animate 7: TRANSFORM MOBILE")
         classList.add('device-transform_mobile')
       })
-
-
-
-
   }, [])
   return (
     <Container>
@@ -73,12 +69,4 @@ export default function HeroAnimationFrame() {
     </Container>
   )
 }
-const styles = {
-  box: {
-    width: 50,
-    height: 50,
-    backgroundColor: 'red',
-    border: '3px solid red',
-    marginBottom: 10
-  }
-}
+

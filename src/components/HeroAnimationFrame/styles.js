@@ -43,8 +43,8 @@ const mobile = {
     return this.height / 2
   },
 }
-const cameraColor = "#70055d"
-const borderColor = "#b31697"
+const cameraColor = "#333"
+const borderColor = "#fff"
 
 export const Container = styled.div`
   position: absolute;

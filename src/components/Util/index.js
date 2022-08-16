@@ -26,17 +26,31 @@ export const MobDeskIcon = styled(FaMicrochip)`
 export const Button = styled.button`
   border: none;
   outline: none;
-  background: transparent;
   text-align: center;
-  font-weight: 500;
-  margin: 0px 5px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  font-weight: 600;
   cursor: pointer;
-  background-color: ${props => props.theme.primary_color ? props.theme.primary_color : props.theme.dark};
-  padding: 10px 15px;
-  color: ${props => props.color ? props.color : props.theme.light};
-  margin: 4px;
+  background: #fff;
+  padding: 20px 25px;
+  color: #212122;
   font-family: Roboto-Bold;
-  font-size:1.3rem;
+  font-size:1.4rem;
+  transition: .1s ease-in;
+`
+export const ButtonHeroPrimary = styled(Button)`
+  border: 2px solid transparent;
+  border-radius: 30px;
+
+  &:hover{
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    transform: scale(1.1);
+  }
+`
+export const ButtonHeroSegundary = styled(Butoon)`
 
 `
 

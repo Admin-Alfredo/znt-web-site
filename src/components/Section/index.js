@@ -26,8 +26,8 @@ export default function Section(props) {
             {texts?.map(text => <TextSection>{text}</TextSection>)}
           </WrapperText>
         </WrapperContent>
-        <WrapperSectionButtons>
-            
+        <WrapperSectionButtons> 
+              
         </WrapperSectionButtons>
     </Container>
   )

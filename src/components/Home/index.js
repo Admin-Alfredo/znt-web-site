@@ -2,7 +2,8 @@ import React from 'react'
 import HeroAnimationFrame from '../HeroAnimationFrame'
 import Section from '../Section'
 import SectionDatas from '../Section/datas'
-import { Title, Button, ButtonLink } from '../Util'
+import Link from 'next/link'
+import { Title, Button, ButtonLink, ButtonHeroPrimary } from '../Util'
 import {
   Contanier,
   Hero,
@@ -28,7 +29,9 @@ export default function Home() {
             </Title>
           </WrapperHeroTitle>
           <ButtonsGroupHero>
-            <Button>Encomendar</Button>
+            <ButtonHeroPrimary href="/">
+              <a>encomendar</a>
+            </ButtonHeroPrimary>
             <ButtonLink href="/">ver planos</ButtonLink>
           </ButtonsGroupHero>
         </WrapperHeroContent>

@@ -11,7 +11,7 @@ export const Hero = styled.div`
   display: flex;
   /* flex-direction: column; */
   /* align-items: center; */
-  background: #491fc8;
+  background: ${props => props.theme.color_blue_segundary};
   transform: translateY(-10px) skewY(-5deg);
   transform-style: initial;
 `
@@ -36,10 +36,11 @@ export const ButtonsGroupHero = styled.div`
   margin: 40px 0;
 `
 export const ContentMain = styled.main`
-  width: 100%;
-  /* min-height: 300px; */
+  width:100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  margin-top: 100px;
   padding: 0px 15px;
 `
 export const Footer = styled.footer`

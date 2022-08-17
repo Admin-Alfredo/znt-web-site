@@ -9,7 +9,7 @@ import {
   WrapperText,
   WrapperAnimationFrame,
   TextSection,
-
+  Card
 } from './styles'
 
 export default function Section(props) {
@@ -17,18 +17,20 @@ export default function Section(props) {
   console.log(props.data)
   return (
     <Container {...props}>
-        <SubTitle>{title}</SubTitle>
-        <WrapperContent>
-          <WrapperAnimationFrame>
-            <AnimationComponent />
-          </WrapperAnimationFrame>
+      <SubTitle>{title}</SubTitle>
+      <WrapperContent>
+        <WrapperAnimationFrame>
+          <AnimationComponent />
+        </WrapperAnimationFrame>
+        <Card>
           <WrapperText>
-            {texts?.map(text => <TextSection>{text}</TextSection>)}
+            {texts?.map((text, key) => <TextSection key={key}>{text}</TextSection>)}
           </WrapperText>
-        </WrapperContent>
-        <WrapperSectionButtons> 
-              
-        </WrapperSectionButtons>
+          <WrapperSectionButtons>
+
+          </WrapperSectionButtons>
+        </Card>
+      </WrapperContent>
     </Container>
   )
 }

@@ -32,9 +32,9 @@ export const Button = styled.button`
   justify-content: center;
   font-weight: 600;
   cursor: pointer;
-  background: #fff;
-  padding: 20px 25px;
-  color: #212122;
+  background: #ddd;
+  padding: 10px 25px;
+  color: #121214;
   font-family: Roboto-Bold;
   font-size:1.4rem;
   transition: .1s ease-in;
@@ -42,6 +42,9 @@ export const Button = styled.button`
 export const ButtonHeroPrimary = styled(Button)`
   border: 2px solid transparent;
   border-radius: 30px;
+  padding: 16px 25px;
+  background-color: #fff;
+  color: ${props => props.theme.color_blue_segundary};
 
   &:hover{
     border: 2px solid #fff;
@@ -50,8 +53,17 @@ export const ButtonHeroPrimary = styled(Button)`
     transform: scale(1.1);
   }
 `
-export const ButtonHeroSegundary = styled(Butoon)`
-
+export const ButtonHeroSegundary = styled(Button)`
+  background: transparent;
+  border:2px solid  #fff;
+  border-radius: 30px;
+  color: #fff;
+  &:hover{
+    border: 2px solid transparent;
+    background: #fff;
+    color: ${props => props.theme.color_blue_segundary};
+    transform: scale(1.1);
+  }
 `
 
 export const ButtonLink = function (props) {
@@ -75,7 +87,8 @@ export const Title = styled.h1`
 
 `
 export const SubTitle = styled.h2`
-  font-size: 2.1rem;
+  font-size: 2.3rem;
+  text-align: center;
   font-family: Roboto;
   margin: 15px 0px;
   color: #500843;

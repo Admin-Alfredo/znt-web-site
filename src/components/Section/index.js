@@ -4,13 +4,12 @@ import HeroAnimationFrame from '../HeroAnimationFrame'
 import { ButtonSectionPrimary, ButtonSectionSegundary, SubTitle } from '../Util'
 import {
   Container,
-  Hero,
   WrapperSectionButtons,
   WrapperContent,
   WrapperText,
   WrapperAnimationFrame,
   TextSection,
-  Card
+  Card,
 } from './styles'
 
 export default function Section(props) {
@@ -24,6 +23,7 @@ export default function Section(props) {
           <AnimationComponent />
         </WrapperAnimationFrame>
         <Card>
+          <div className="caret"></div>
           <WrapperText>
             {texts?.map((text, key) => <TextSection key={key}>{text}</TextSection>)}
           </WrapperText>

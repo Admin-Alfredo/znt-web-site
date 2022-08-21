@@ -9,7 +9,10 @@ export const Container = styled.div.attrs({ className: 'section' })`
   width: 100%;
   flex-direction: column;
   margin-bottom: 100px;
-
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 1px 5px 7px #9b929a3a;
+  border-radius: 10px;
   &.show .card{
     transform: translateY(-15%);
     opacity: 1;
@@ -38,11 +41,12 @@ export const WrapperHeroTextAndTitle = styled.div`
 export const WrapperText = styled.div.attrs({ className: 'section-text' })`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  justify-content: flex-start;
+  padding: 0 25px;
   /**  */
   & > p{
-    text-align: center;
+    /* text-align: center; */
   }
 `
 export const Card = styled.div.attrs({className: 'card'})`
@@ -59,21 +63,23 @@ export const Card = styled.div.attrs({className: 'card'})`
   transform: translateY(15%);
   opacity: 0;
   /* estilo do card text */
+  border-top: 1px solid #ddd;
   padding: 10px 5px;
   background-color: #fff;
-  box-shadow: -1px -1px 20px #9b929a3a;
-  border-radius: 10px;
+  
+  /* border-radius: 10px; */
 
-  &::after{
-    content: '';
+  & > .caret{
     position: absolute;
     background: transparent;
-    left:50%;
-    top:-25px;
-    transform: translateX(-50%);
-    border-bottom: 25px solid #fff;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
+    left:calc(50% - 12px);
+    top:-13px;
+    height: 28px;
+    width: 28px;
+    background: #fff;
+    transform: rotate(-45deg);
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
   }
 `
 export const TextSection = styled(Text)`

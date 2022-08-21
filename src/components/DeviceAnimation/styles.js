@@ -28,8 +28,8 @@ const laptop = {
   },
 }
 const tablet = {
-  width: 100,
-  height: 60,
+  width: 140,
+  height: 90,
   halfWidth: function () {
     return this.width / 2
   },
@@ -39,8 +39,8 @@ const tablet = {
 }
 
 const mobile = {
-  width: 100,
-  height: 60,
+  width: 50 ,
+  height: 90,
   halfWidth: function () {
     return this.width / 2
   },
@@ -52,12 +52,28 @@ const mobile = {
 export const Container = styled.div`
   border-radius: 10px;
   position: relative;
-  width: ${desktop.width}px;
-  height: ${desktop.height}px;
   background: linear-gradient(-30deg,#000  50%,  #333 10%);
-  left: calc(50% - ${desktop.halfWidth()}px);
-  top: calc(50% - ${desktop.halfHeight()}px);
   transition: .5s ease-in-out;
+  
+  &.desktop{
+    width: ${desktop.width}px;
+    height: ${desktop.height}px;
+    left: calc(50% - ${desktop.halfWidth()}px);
+    top: 0;
+  }
+  & > .display::after{
+    /* CAMERA */
+    content: '';
+    background: radial-gradient(#111, #333);
+    position: absolute;
+    border: 1px  solid #111;
+    border-radius: 10px;
+    visibility: hidden;
+  }
+  & > .base{ visibility: hidden;}
+  & > .base .teclado{visibility: hidden;}
+  &.desktop > .base{ visibility: visible}
+  &.desktop > .base .teclado{ visibility: visible}
 
   & > .display{
     --width: 95%;
@@ -80,22 +96,19 @@ export const Container = styled.div`
     height: ${laptop.height}px;
     background: linear-gradient(-30deg,#000  50%,  #333 50%);
     left: calc(50% - ${laptop.halfWidth()}px);
-    top: calc(50% - ${laptop.halfHeight()}px);
   }
   &.laptop > .display::after{
-    /* CAMERAA LAPTOP */
+    /* CAMERA LAPTOP */
     content: '';
     width: 6px;
     height: 6px;
-    background: radial-gradient(#111, #333);
-    position: absolute;
-    border: 1px  solid #111;
-    border-radius: 10px;
     left: calc(50% - (6px / 2));
     top: -10px;
+    visibility: visible;
   }
   
   &.laptop > .base{
+    visibility: visible;
     --width: 180px;
     --height: 10px;
     width: var(--width);
@@ -103,6 +116,7 @@ export const Container = styled.div`
     bottom: calc(0% - var(--height));
   } 
   &.laptop > .base > .teclado{
+    visibility: visible;
     display: block;
     border-radius: 0px 0px 50px 50px;
     height: 5px;
@@ -110,27 +124,61 @@ export const Container = styled.div`
     background: red;
     position: relative;
     left: calc(50% - (200px / 2));
-    bottom:-10px ;
+    bottom:-9px ;
     background: #000;
   }
   /* TABLET */
   &.tablet {
-    width: 140px;
-    height: 90px;
+    width: ${tablet.width}px;
+    height: ${tablet.height}px;
     border-radius: 8px;
     left: calc(50% - (140px / 2));
   }
   &.tablet > .display{
     width: 90%;
     left: calc(50% - (90% / 2));
-    top: calc(50% - ((var(--height) / 2)));
-
+    top: calc(50% - (${tablet.halfHeight()}px / 2)));
   }
   &.tablet > .base{
     visibility: hidden;
   }
+  &.mobile{
+    border-radius: 5px;
+    width: ${mobile.width}px;
+    height: ${mobile.height}px;
+    left: calc(50% - ${mobile.halfWidth()}px);
+  }
+  &.mobile > .display{
+    width: 90%;
+    left: calc(50% - (90% / 2));
+    top: calc(50% - ((var(--height) / 2)));
+  }
+  &.mobile > .display::after{
+    /* content: ''; */
+    width: 4px;
+    height: 4px;
+    left: calc(50% - (6px / 2));
+    top: -8px;
+    visibility: visible;
+  }
+  &.mobile > .display::before{
+      content: '';
+    background: #222;
+    position: absolute;
+    border-radius: 10px;
+    visibility: hidden;
+    /* content: ''; */
+    width: 7px;
+    height: 7px;
+    left: calc(50% - (6px / 2));
+    bottom: -8px;
+    visibility: visible;
+  }
+  
 `
-export const Display = styled.div.attrs({ className: 'display' })``
+
+export const Display = styled.div.attrs({ className: 'display' })``;
+
 export const Base = styled.div.attrs({ className: 'base' })`
   --width: 60px;
   --height: 15px;

@@ -18,9 +18,7 @@ import { FaFacebook, FaTwitter, FaBlogger } from 'react-icons/fa'
 
 
 export default function Home() {
-
   useEffect(function () {
-    NodeList.prototype.filter = Array.prototype.filter
     const sections = document.querySelectorAll('.section')
     let loadSections = false;
     function showSection() {
@@ -60,7 +58,7 @@ export default function Home() {
           </ButtonsGroupHero>
         </WrapperHeroContent>
       </Hero>
-      <h2 style={{fontSize: '3.8rem', color:'#646464', padding: '0 15px'}}>Quero ter um...</h2>
+      <h2 style={{ fontSize: '3.8rem', color: '#646464', padding: '0 15px' }}>Quero ter um...</h2>
       <ContentMain>
         {SectionDatas?.map((data, key) => (<Section data={data} key={key} />))}
       </ContentMain>
@@ -83,10 +81,10 @@ export default function Home() {
           </a>
         </FooterLine>
         <FooterLine style={{ display: 'flex', justifyContent: 'center', margin: '15px auto' }}>
-          <Link href="/"><span className='link'>Contatos</span></Link> | 
+          <Link href="/"><span className='link'>Contatos</span></Link> |
           <Link href="/"><span className='link'> Sobre nós</span></Link>
         </FooterLine>
-        <FooterLine style={{ display: 'flex', justifyContent: 'center' }}> 
+        <FooterLine style={{ display: 'flex', justifyContent: 'center' }}>
           <span className="by-znt">powered by Zénitech</span>
         </FooterLine>
       </Footer>

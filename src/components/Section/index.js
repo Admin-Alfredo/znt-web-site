@@ -1,6 +1,7 @@
 import React from 'react'
+import Link  from 'next/link'
 import HeroAnimationFrame from '../HeroAnimationFrame'
-import { BloggerIcon, Button, ButtonLink, MobDeskIcon, SubTitle, Text, WebAppIcon, WebSiteIcon } from '../Util'
+import { ButtonSectionPrimary, ButtonSectionSegundary, SubTitle } from '../Util'
 import {
   Container,
   Hero,
@@ -27,7 +28,12 @@ export default function Section(props) {
             {texts?.map((text, key) => <TextSection key={key}>{text}</TextSection>)}
           </WrapperText>
           <WrapperSectionButtons>
-
+            <Link href="/">
+              <ButtonSectionPrimary>encomendar</ButtonSectionPrimary>
+            </Link>
+            <Link href="/">
+              <ButtonSectionSegundary>mais info</ButtonSectionSegundary>
+            </Link>
           </WrapperSectionButtons>
         </Card>
       </WrapperContent>

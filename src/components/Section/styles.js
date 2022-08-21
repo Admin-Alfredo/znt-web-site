@@ -96,8 +96,10 @@ export const WrapperAnimationFrame = styled.div.attrs({ className: 'display-sect
 
 `
 export const WrapperSectionButtons = styled.div`
-  /* padding: 20px;
-  margin-top: 20px; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 `
 
 

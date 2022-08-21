@@ -65,6 +65,40 @@ export const ButtonHeroSegundary = styled(Button)`
     transform: scale(1.1);
   }
 `
+export const ButtonSectionPrimary = styled(Button)`
+  background: #910eb7d5;
+  border: 2px solid  #fff;
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: #fff;
+  font-weight: normal;
+  font-family: Roboto;
+  margin: 0 10px;
+
+  &:hover{
+    border: 2px solid transparent;
+    background: #fff;
+    color: ${props => props.theme.color_blue_segundary};
+    transform: scale(1.1);
+  }
+`
+export const ButtonSectionSegundary = styled(Button)`
+  background: transparent;
+  border: 2px solid  #fff;
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: ${props => props.theme.color_blue_segundary};
+  font-weight: normal;
+  font-family: Roboto;
+  margin: 0 10px;
+
+  &:hover{
+    border: 2px solid transparent;
+    background: #fff;
+    color: ${props => props.theme.color_blue_segundary};
+    transform: scale(1.1);
+  }
+`
 
 export const ButtonLink = function (props) {
   return (

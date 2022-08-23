@@ -5,7 +5,7 @@ export default function DeviceAnimation({ animations }) {
   return (
     <Container className="mobile">
       <Display>
-
+        
       </Display>
       <Base>  <div className="teclado"></div></Base>
     </Container>

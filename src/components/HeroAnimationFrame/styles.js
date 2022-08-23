@@ -77,14 +77,14 @@ export const FrameDevice = styled.div`
   border-radius: 5px;
   left: calc(50% - ${desktop.halfWidth()}px);
   top: calc(50% - ${desktop.halfHeight()}px);
-  transform: scale(2.6);
+  transform: scale(2.2);
   transition: .6s cubic-bezier(0.15, -0.03, 0.35, 0.97);
   pointer-events: none;
   &.device_initial-color{
     border-color: ${borderColor}
   }
   &.device_initial-scale{
-    transform: scale(1);
+    transform: scale(1.2, 1);
   }
   &.device-justify_desktop{
     transform: translateY(-100px);

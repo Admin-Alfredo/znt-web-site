@@ -68,8 +68,8 @@ export const ButtonHeroSegundary = styled(Button)`
 export const ButtonSectionPrimary = styled(Button)`
   background: #910eb7d5;
   border: 2px solid  #fff;
-  border-radius: 20px;
-  padding: 7px 15px;
+  border-radius: 10px;
+  padding: 10px 15px;
   color: #fff;
   font-weight: normal;
   font-family: Roboto;

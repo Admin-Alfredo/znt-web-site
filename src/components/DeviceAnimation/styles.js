@@ -135,13 +135,13 @@ export const Container = styled.div`
     left: calc(50% - (140px / 2));
   }
   &.tablet > .display{
-    width: 90%;
+    width:90%;
+    height: 80%;
     left: calc(50% - (90% / 2));
-    top: calc(50% - (${tablet.halfHeight()}px / 2));
+    top: calc(50% - (80% / 2));
   }
-  &.tablet > .base{
-    visibility: hidden;
-  }
+  &.tablet > .base{visibility: hidden;}
+
   &.mobile{
     border-radius: 5px;
     width: ${mobile.width}px;
@@ -161,27 +161,43 @@ export const Container = styled.div`
     top: -8px;
     visibility: visible;
   }
-  &.mobile > .display::before{
-      content: '';
-    background: #222;
+  
+  &.mobile > .display + .base::after{
+    visibility: visible;
+    background: radial-gradient(#111, #333);
     position: absolute;
+    border: 1px  solid #111;
     border-radius: 10px;
-    visibility: hidden;
-    /* content: ''; */
+    
+    width: 4px;
+    height: 4px;
+    left: calc(50% - (4px / 2));
+    top: calc(-100% - 73px);
+
+   
+  }
+  &.mobile > .display + .base::before{
+    visibility: visible;
+    border:none;
+    background: #222;
+    border-radius: 10px;
     width: 7px;
     height: 7px;
-    left: calc(50% - (6px / 2));
-    bottom: -8px;
-    visibility: visible;
-  }; 
+    left: calc(50% - (7px / 2));
+    top: -8px;
+  }
+
 `
 
 export const Display = styled.div.attrs({ className: 'display' })`
 
-  overflow: auto;
+   overflow: auto;
+   /* padding-top: -10px; */
+   
   &::-webkit-scrollbar{
     width: 0;
   }
+
 `;
 
 export const Base = styled.div.attrs({ className: 'base' })`
